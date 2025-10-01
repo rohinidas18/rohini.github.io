@@ -1,4 +1,4 @@
-baseURL: https://rohini.github.io/
+baseURL: https://rohinidas18.github.io/rohini.github.io/
 languageCode: en-us
 title: Rohini's Portfolio
 theme: hugo-profile
@@ -37,7 +37,7 @@ Menus:
 params:
   title: ""
   description: Text about my cool site
-  # staticPath: "/logo.png"  # The path to serve the static files from
+  staticPath: "/rohini.github.io/"  # The path to serve the static files from
   favicon: "/R.png"
 
   # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
