@@ -73,8 +73,8 @@ params:
     button:
       enable: true
       name: "Resume"
-      url: "https://drive.google.com/file/d/1itj17KMVBmcOzUuzJ0oVUKPsj9WCpM0J/view?usp=sharing"
-      download: false
+      url: "/rohini.github.io/Rohini_Das_Resume.pdf"
+      download: true
       newPage: true
     socialLinks:
       fontAwesomeIcons:
