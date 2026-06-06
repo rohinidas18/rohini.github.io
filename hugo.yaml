@@ -64,8 +64,8 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Rohini."
-    subtitle: "I turn data into solutions."
-    content: "I love understanding complex problems, and converting them to impactful workflows using artificial intelligence, machine learning and data science."
+    subtitle: "I build production AI & ML systems."
+    content: "I'm a Machine Learning / AI Engineer who ships LLM agents, recommendation systems, and ML pipelines that run in production. Currently pursuing my Master's in Computational Data Science at Carnegie Mellon University, and interning as an AI Engineer at Qualcomm."
     image: /rohini.github.io/roh.jpg
     bottomImage:
       enable: false
@@ -89,69 +89,83 @@ params:
     title: "About Me"
     image: "/rohini.github.io/rohptf.jpg"
     content: |-
-      I am an AI/ML developer with a passion for Software Development. I have a background in Computer Science and Mathematics, and I have a strong interest in the application of technology in healthcare. I am currently pursuing my Master's in Computational Data Science at the School of Computer Science in Carnegie Mellon University.
+      I'm a Machine Learning / AI Engineer pursuing my Master's in Computational Data Science at the School of Computer Science, **Carnegie Mellon University** (GPA 3.99/4.00, graduating Dec 2026). I love taking ambiguous, complex problems all the way from research to production — designing the model, the serving stack, and the evaluation that proves it works.
 
-      My most recent project is about visualizing Large Language Model architectures interactively, and I am learning how to deploy AI-based applications.
+      My recent work spans **agentic LLM systems** (multi-agent NL2SQL, MCP registries, Agent-to-Agent frameworks), **real-time recommendation systems** on streaming data, and **MLOps** — Dockerized serving, automated retraining, and A/B-tested rollouts. I've built these at **Qualcomm** and **Siemens**, and across CMU research. I'm especially drawn to applying ML in high-impact domains like healthcare.
     skills:
       enable: true
       title: "Here are a few technologies I've been working with recently:"
       items:
-        - "PyTorch"
-        - "Python"
-        - "AzureOpenAI"
-        - "SQL"
-        - "Node.js"
-        - "Angular"
+        - "Python · SQL · Scala · Java"
+        - "PyTorch · TensorFlow · Hugging Face"
+        - "LangGraph · LangChain · RAG · MCP"
+        - "AzureOpenAI · vLLM · Ollama"
+        - "AWS (EKS/Lambda/S3/EC2) · GCP · Azure"
+        - "Docker · Kubernetes · Terraform · CI/CD"
+        - "FastAPI · Kafka · Spark · ONNX"
+        - "Prometheus · Grafana · A/B Testing"
 
   # Experience
   experience:
     enable: true
     # title: "Custom Name"
     items:
-      - job: "Artificial Intelligence Apprentice"
-        company: "Siemens FT"
-        companyUrl: "https://www.siemens.com/global/en.html"
-        date: "Aug 2024 - July 2025"
-        # featuredLink:
-        #   enable: true
-        #   url: "https://example.com"
+      - job: "AI Engineering Intern"
+        company: "Qualcomm"
+        companyUrl: "https://www.qualcomm.com/"
+        date: "May 2026 - Aug 2026"
         info:
-          enable: false
-        
+          enable: true
+          content: "Santa Clara, CA"
         content: |
-          I was working on Industrial Copilot for Operations © [(ICFO)](https://press.siemens.com/global/en/pressrelease/siemens-industrial-copilot-expanded-adopted-thyssenkrupp), where I developed a validator, message publisher, and MCP Registry within the Agent-to-Agent (A2A) protocol.
+          Building **agentic AI tooling for WLAN systems engineering**.
 
-          - Worked in Agile Scrum with Azure DevOps, utilizing GitLab for CI/CD and Docker for pipelining.
-          - We used Langraph, AzureOpenAI and Nemo GuardRails for safe workflow automation, and Azure Service Bus for async handlers.
+          - Telemetry evaluation and structured information retrieval from extended research standard documentation.
+          - End-to-end automation workflows designed for full traceability.
 
-      - job: "Business Excellence Intern"
+      - job: "Artificial Intelligence Engineer"
+        company: "Siemens Foundational Technologies"
+        companyUrl: "https://www.siemens.com/global/en.html"
+        date: "Aug 2024 - Aug 2025"
+        info:
+          enable: true
+          content: "Bangalore, IN"
+        content: |
+          Worked on the **Industrial Copilot for Operations** © [(ICFO)](https://press.siemens.com/global/en/pressrelease/siemens-industrial-copilot-expanded-adopted-thyssenkrupp), building agentic systems within the Agent-to-Agent (A2A) framework.
+
+          - Designed and deployed the publication pipeline and **MCP Registry**, achieving low-latency real-time validation at ~3s turnaround.
+          - Engineered a production-grade, modular **Natural Language to SQL (NL2SQL)** agentic system with persistent memory, dynamic state management, and large-scale SQLServer querying via LangGraph — cutting internal MIS data retrieval from 2–3 hours to on-demand.
+          - Stack: LangGraph, AzureOpenAI, Nemo Guardrails, Azure Service Bus, Docker, GitLab CI/CD in Agile Scrum.
+
+      - job: "Business Intelligence Intern"
         company: "Siemens"
         companyUrl: "https://www.siemens.com/in/en.html"
-        date: "March 2024 - July 2024"
+        date: "Mar 2024 - July 2024"
         info:
-          enable: false
-        # featuredLink:
-        #   enable: true
-        #   url: "https://example.com"
+          enable: true
+          content: "Bangalore, IN"
         content: |
-          As a Generative AI Intern for Business Excellence, I proposed a methodology for log analysis of Non Functional Requirements testing of Siemens Simatic HMI Panels, which reduced development time by more than 10 hours per fortnight.
+          Generative AI intern for Business Excellence.
 
-          - Invention Disclosure No. 2024E14797 IN.
-          - Increased bug redressal quality for cases of Screen Freeze.
+          - Proposed an AI-based log analysis of Non-Functional Requirements testing for Siemens Simatic HMI Panels — filed as **Invention Disclosure No. 2024E14797 IN**. Reduced development time by 10+ hours per fortnight and improved bug-redressal quality for Screen Freeze regressions.
+          - Built a full-stack **GenAI Assistant** automating Quality Management Review analysis from MS Excel, PowerPoint and Azure DevOps, with GenAI-mediated negotiation agents and an LLM-as-a-judge evaluation system that replaced hour-long quarterly meetings.
 
-      - job: "Computer Vision Intern"
+      - job: "Computer Vision Research Intern"
         company: "Siemens Advanta"
         companyUrl: "https://www.siemens-advanta.com/"
-        date: "September 2022 - March 2023"
+        date: "Sep 2022 - Mar 2023"
         info:
-          enable: false
+          enable: true
+          content: "🏆 IEEE ICACCS 2023 — Best Paper Award"
         featuredLink:
           enable: true
+          name: "Read the paper"
           url: "https://ieeexplore.ieee.org/abstract/document/10112687/"
         content: |
-          Incorporated YOLOv5 with Ultralytics weights in a self-supervised neural network that extracted printed text from bank checks containing both handwritten and printed text.
+          Incorporated **YOLOv5** with Ultralytics weights in a self-supervised neural network to segment printed text from bank checks containing mixed handwritten and printed content.
 
-          - Reduced an 11-step bank check collection process to 5 simple steps with very little human intervention 
+          - Published in **IEEE ICACCS 2023** and won the **Best Paper Award**.
+          - Reduced an 11-step bank check collection process to 5 simple steps with minimal human intervention.
 
 
   # Education
@@ -164,12 +178,13 @@ params:
         school:
           name: "Carnegie Mellon University"
           url: "https://www.lti.cs.cmu.edu/"
-        date: "2025 - present"
-        GPA: "TBD!"
+        date: "2025 - Dec 2026"
+        GPA: "3.99 out of 4.0"
         content: |-
-          Extracurricular Activities
-            - Work In Progress ...
-            - Check back later :-)
+          School of Computer Science. Teaching Assistant for Interactive Data Science.
+
+          Relevant coursework
+            - ML in Production, Cloud Computing, Advanced NLP, Multimodal Machine Learning, Interactive Data Science.
       - title: "Bachelor of Technology in Computer Science"
         school:
           name: "Vellore Institute of Technology, Vellore"
@@ -177,12 +192,12 @@ params:
         date: "2020 - 2024"
         GPA: "3.985 out of 4.0"
         content: |-
-          My coursework covered Deep Learning, Predictive Analytics, Social Information Networks, Internet and Web Programming, Operating Systems and Databases.
-          - I specialized in Bioinformatics! My work - [here](https://onlinelibrary.wiley.com/doi/abs/10.1002/jmr.3042).
+          Specialized in Bioinformatics. Coursework in Deep Learning, Data Structures & Algorithms, OOP, Predictive Analytics, Social Information Networks, Operating Systems and Databases.
+          - Published bioinformatics research - [read it here](https://onlinelibrary.wiley.com/doi/abs/10.1002/jmr.3042).
 
           Extracurricular Activities
             - Vice President of Education at Toastmasters, VIT (Club: Clima). 
-            - Volunteered at Becoming-I-Foundation, and Ayuda VIT for teaching underprivileged children and outreach.
+            - Volunteered at Becoming-I-Foundation and Ayuda VIT, teaching underprivileged children and community outreach.
         # featuredLink:
         #   enable: true
         #   name: "My academic record"
@@ -193,60 +208,87 @@ params:
           url: "https://www.dpskolkata.com/"
         GPA: "AISSE - 95.2%, SSE - 95.8%"
 
-  # # Achievements
-  # achievements:
-  #   enable: true
-  #   # title: "Custom Name"
-  #   items:
-  #     - title: Google kickstart runner
-  #       content: I solved all problems with optimal solution.
-  #       url: https://example.com
-  #       image: /rohini.github.io/images/achievement.jpg
-  #     - title: Facebook Hackathon Winner
-  #       content: Developed a product using Artificial Intelligence.
-  #       image: /rohini.github.io/images/achievement.jpg
-  #     - title: Hugo Profile
-  #       content: Developed a theme and getting 1K+ downloads per month.
-  #       url: "https://github.com/gurusabarish/hugo-profile"
-  #       image: /rohini.github.io/images/achievement.jpg
+  # projects
+  projects:
+    enable: true
+    title: "Projects & Research"
+    items:
+      - title: NL2SQL Agent Benchmarking on Spider 2.0
+        content: A multi-agent NL2SQL system evaluated against the Spider 2.0 benchmark and served via vLLM on SLURM. It integrates enriched semantic schema retrieval, explicit query planning, sub-agent execution, and SQL validation with self-correction loops — evaluated across GLM-4.7-Flash-AWQ, Gemini 3 Pro and GPT-5.5.
+        image: /rohini.github.io/projects/nl2sql.svg
+        badges:
+          - "Multi-Agent"
+          - "vLLM"
+          - "SLURM"
+          - "CMU Capstone"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/rohinidas18
 
-  # # projects
-  # projects:
-  #   enable: true
-  #   # title: "Custom Name"
-  #   items:
-  #     - title: Hugo Profile
-  #       content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
-  #       image: /images/projects/profile.png
-  #       featured:
-  #         name: Demo
-  #         link: https://hugo-profile.netlify.app
-  #       badges:
-  #         - "Hugo"
-  #         - "Bootstrap"
-  #         - "Javascript"
-  #       links:
-  #         - icon: fa fa-envelope
-  #           url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
-  #         - icon: fab fa-github
-  #           url: https://github.com/gurusabarish/hugo-profile
-  #         - icon: fab fa-twitter
-  #           url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+      - title: Real-Time Movie Recommendation Platform
+        content: A PyTorch matrix-factorization model trained on 236K users × 20K movies from live Kafka streams, with zero-downtime Dockerized dual-instance ONNX serving and automated retraining via GitHub Actions. A cost-aware reranker cut recommendation license cost by 93% ($6.01 → $0.42), validated with a full A/B framework (Welch's t-test, Mann-Whitney U).
+        image: /rohini.github.io/projects/movie-rec.svg
+        badges:
+          - "PyTorch"
+          - "Kafka"
+          - "ONNX"
+          - "MLOps"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/rohinidas18
 
-  #     - title: Image Converter
-  #       content: A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
-  #       image: /rohini.github.io/images/projects/converter.jpg
-  #       featured:
-  #         name: Demo
-  #         link: https://django-converter.herokuapp.com
-  #       badges:
-  #         - "Django"
-  #         - "Bootstrap"
-  #       links:
-  #         - icon: fab fa-github
-  #           url: https://github.com/gurusabarish/converter
+      - title: Twitter Social Graph Recommendation Service
+        content: A ranked user-recommendation REST microservice in Java Spring Boot sustaining 6000+ RPS at ~88% accuracy, backed by a Scala/Spark ETL pipeline over a 1.2TB Twitter dataset on GCP. Deployed with load balancing across self-managed Kubernetes, AWS EKS and ECS Fargate (Terraform IaC), fully automated via GitHub Actions.
+        image: /rohini.github.io/projects/twitter-graph.svg
+        badges:
+          - "Spring Boot"
+          - "Spark"
+          - "Kubernetes"
+          - "AWS"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/rohinidas18
 
- 
+      - title: "FedHealth: Federated ML for ICU Mortality Prediction"
+        content: A privacy-preserving, decentralized mortality-prediction model using PyTorch and Flower.ai on ICU-EHR data from MIMIC-IV. Applied FedAvg and FedProx federated algorithms to achieve an F1 of ~0.94 and 95.3% accuracy, significantly outperforming a sequential ANN baseline (F1 0.82).
+        image: /rohini.github.io/projects/fedhealth.svg
+        badges:
+          - "Federated Learning"
+          - "PyTorch"
+          - "Flower.ai"
+          - "Healthcare"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/rohinidas18
+
+      - title: Automated Face Detection & Recognition
+        content: Led a 4-person team to build a face detection and recognition pipeline in TensorFlow/Keras using ResNet50 transfer learning on the AT&T Faces and FaceScrub datasets. Systematic hyperparameter tuning during segmentation reached 98.7% validation accuracy, integrated into the university's automated attendance system.
+        image: /rohini.github.io/projects/face-detection.svg
+        badges:
+          - "ResNet50"
+          - "TensorFlow"
+          - "Computer Vision"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/rohinidas18
+
+  # Achievements
+  achievements:
+    enable: true
+    title: "Achievements & Publications"
+    items:
+      - title: IEEE ICACCS 2023 — Best Paper Award
+        content: For self-supervised text segmentation of bank checks using YOLOv5; reduced an 11-step process to 5 steps.
+        url: "https://ieeexplore.ieee.org/abstract/document/10112687/"
+      - title: Invention Disclosure 2024E14797 IN
+        content: AI-based log analysis for Non-Functional Requirements testing of Siemens Simatic HMI Panels, filed at Siemens.
+      - title: Bioinformatics Research Publication
+        content: Published in the Journal of Molecular Recognition (Wiley) during my undergraduate specialization.
+        url: "https://onlinelibrary.wiley.com/doi/abs/10.1002/jmr.3042"
+      - title: Near-Perfect Academic Record
+        content: GPA 3.99/4.00 at Carnegie Mellon (MCDS) and 3.985/4.00 at VIT for B.Tech in Computer Science.
+      - title: Interactive Data Science TA — CMU
+        content: Teaching Assistant for Interactive Data Science at Carnegie Mellon University.
 
   #Contact
   contact:
