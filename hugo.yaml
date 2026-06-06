@@ -64,7 +64,7 @@ params:
     enable: true
     intro: "Hi, my name is"
     title: "Rohini."
-    subtitle: "I build production AI & ML systems."
+    subtitle: "I build production AI&ML systems."
     content: "I'm a Machine Learning / AI Engineer who ships LLM agents, recommendation systems, and ML pipelines that run in production. Currently pursuing my Master's in Computational Data Science at Carnegie Mellon University, and interning as an AI Engineer at Qualcomm."
     image: /rohini.github.io/roh.jpg
     bottomImage:
