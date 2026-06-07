@@ -112,6 +112,48 @@ const statObserver = new IntersectionObserver(
 );
 document.querySelectorAll(".stat__num").forEach((el) => statObserver.observe(el));
 
+// Project modal
+const modal = document.getElementById("modal");
+const modalBody = document.getElementById("modalBody");
+const modalClose = document.getElementById("modalClose");
+let lastFocused = null;
+
+const openModal = (card) => {
+  const tpl = card.querySelector("template.card__detail");
+  if (!tpl) return;
+  lastFocused = card;
+  modalBody.innerHTML = "";
+  modalBody.appendChild(tpl.content.cloneNode(true));
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+  modalBody.scrollTop = 0;
+  modalClose.focus();
+};
+
+const closeModal = () => {
+  if (modal.hidden) return;
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+  modalBody.innerHTML = ""; // stops any playing video / iframe
+  if (lastFocused) lastFocused.focus();
+};
+
+document.querySelectorAll(".card[data-modal]").forEach((card) => {
+  card.addEventListener("click", () => openModal(card));
+  card.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      openModal(card);
+    }
+  });
+});
+
+modalClose.addEventListener("click", closeModal);
+modal.querySelectorAll("[data-close]").forEach((el) => el.addEventListener("click", closeModal));
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeModal();
+});
+
 // Subtle parallax on hero orbs
 const orbs = document.querySelectorAll(".hero .orb");
 if (window.matchMedia("(min-width: 920px)").matches) {

@@ -207,8 +207,10 @@
   <section class="section work" id="work">
     <div class="chapter reveal"><span>Ch. 03</span> Selected work</div>
     <h2 class="section__title reveal">Things I've built &amp; researched.</h2>
+    <p class="work__hint reveal">Tap any project to open the full story — demos, slides &amp; code.</p>
     <div class="cards">
-      <article class="card reveal">
+      <!-- ============ NL2SQL ============ -->
+      <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for NL2SQL Agents on Spider 2.0">
         <div class="card__img"><img src="assets/projects/nl2sql.svg" alt="NL2SQL on Spider 2.0" /></div>
         <div class="card__body">
           <span class="card__kicker">Capstone Research · CMU</span>
@@ -216,12 +218,25 @@
           <p>A multi-agent NL2SQL system served via <strong>vLLM on SLURM</strong> — semantic schema retrieval, explicit query planning, sub-agent execution and self-correction loops. Benchmarked across GLM-4.7, Gemini 3 Pro and GPT-5.5.</p>
           <div class="tags"><span>Multi-Agent</span><span>vLLM</span><span>SLURM</span></div>
         </div>
-        <a class="card__link" href="https://github.com/rohinidas18" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
-        </a>
+        <span class="card__cta">View details <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <template class="card__detail">
+          <span class="md__kicker">Capstone Research · CMU · Jan–Dec 2026</span>
+          <h3 class="md__title">NL2SQL Agents on Spider 2.0</h3>
+          <img class="md__banner" src="assets/projects/nl2sql.svg" alt="NL2SQL on Spider 2.0" />
+          <div class="md__text">
+            <p>A multi-agent natural-language-to-SQL framework built to target the <strong>Spider 2.0 Snowflake</strong> benchmark. It pairs a context engine for enriched semantic schema retrieval with an agent that performs explicit query planning, sub-agent execution, SQL validation and self-correction loops.</p>
+            <p>The system is served via <strong>vLLM on SLURM</strong> and evaluated across GLM-4.7-Flash-AWQ, Gemini 3 Pro and GPT-5.5.</p>
+            <!-- EDIT: add a demo video or screenshots here, e.g.
+                 <video class="md__video" controls preload="metadata"><source src="assets/media/your-clip.mp4" type="video/mp4"></video> -->
+          </div>
+          <div class="md__links">
+            <a class="btn btn--solid" href="https://github.com/Sandeep5500/nl2sql-databao/tree/dev-rohini-g" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </template>
       </article>
 
-      <article class="card reveal">
+      <!-- ============ Movie Recommender ============ -->
+      <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for Real-Time Movie Recommender">
         <div class="card__img"><img src="assets/projects/movie-rec.svg" alt="Real-Time Movie Recommendation Platform" /></div>
         <div class="card__body">
           <span class="card__kicker">ML in Production · CMU</span>
@@ -229,12 +244,29 @@
           <p>A PyTorch matrix-factorization model on <strong>236K users × 20K movies</strong> from live Kafka streams, with zero-downtime ONNX serving and auto-retraining. A cost-aware reranker cut license cost <strong>93%</strong> ($6.01 → $0.42), validated with a full A/B framework.</p>
           <div class="tags"><span>PyTorch</span><span>Kafka</span><span>ONNX</span><span>MLOps</span></div>
         </div>
-        <a class="card__link" href="https://github.com/rohinidas18" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
-        </a>
+        <span class="card__cta">View details <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <template class="card__detail">
+          <span class="md__kicker">ML in Production · CMU · 2026</span>
+          <h3 class="md__title">Real-Time Movie Recommender</h3>
+          <video class="md__video" controls preload="metadata" poster="assets/projects/movie-rec.svg">
+            <source src="assets/media/movie-rec-demo.mp4" type="video/mp4" />
+            Your browser doesn't support embedded video.
+          </video>
+          <p class="md__caption">Final presentation — MLIP, Spring 2026.</p>
+          <div class="md__text">
+            <p>A PyTorch matrix-factorization model trained on <strong>236K users × 20K movies</strong> from live Kafka streams, shipped with zero-downtime Dockerized dual-instance <strong>ONNX serving</strong> and automated retraining via GitHub Actions, plus a hybrid cold-start fallback at ~7.6–10.4 req/s.</p>
+            <p>The full stack includes offline (RMSE/MAE) and online (Watch Precision@20) evaluation and a Prometheus–Grafana dashboard tracking latency and drift. A cost-aware reranker cut recommendation license cost <strong>93%</strong> ($6.01 → $0.42), validated with a full A/B framework (Welch's t-test, Mann-Whitney U).</p>
+          </div>
+          <div class="md__gallery">
+            <img src="assets/media/movie-rec-1.jpg" alt="The MLIP team" />
+            <img src="assets/media/movie-rec-2.jpg" alt="The MLIP team" />
+          </div>
+          <p class="md__caption">The team behind it.</p>
+        </template>
       </article>
 
-      <article class="card reveal">
+      <!-- ============ Social Graph ============ -->
+      <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for Social Graph Recommender">
         <div class="card__img"><img src="assets/projects/twitter-graph.svg" alt="Twitter Social Graph Recommendation Service" /></div>
         <div class="card__body">
           <span class="card__kicker">Cloud Computing · CMU</span>
@@ -242,25 +274,49 @@
           <p>A ranked-user REST microservice in <strong>Spring Boot</strong> sustaining <strong>6000+ RPS</strong>, backed by a Scala/Spark ETL over a 1.2TB dataset. Deployed across self-managed K8s, AWS EKS and ECS Fargate with Terraform IaC.</p>
           <div class="tags"><span>Spring Boot</span><span>Spark</span><span>Kubernetes</span><span>AWS</span></div>
         </div>
-        <a class="card__link" href="https://github.com/rohinidas18" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
-        </a>
+        <span class="card__cta">View details <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <template class="card__detail">
+          <span class="md__kicker">Cloud Computing · CMU · Jan–May 2026</span>
+          <h3 class="md__title">Social Graph Recommender</h3>
+          <img class="md__banner" src="assets/projects/twitter-graph.svg" alt="Social Graph Recommender" />
+          <div class="md__text">
+            <p>A ranked user-recommendation REST microservice in <strong>Java Spring Boot</strong> sustaining over <strong>6000 RPS</strong> at ~88% accuracy, backed by a multi-stage Scala/Spark ETL pipeline over a <strong>1.2TB</strong> Twitter dataset on GCP (interaction, hashtag Jaccard similarity, log keyword relevance).</p>
+            <p>With sub-millisecond web-tier reads via tuned HikariCP / Tomcat / Apache HttpClient pooling, the service was deployed with load balancing across self-managed Kubernetes, AWS EKS and ECS Fargate (Terraform IaC, least-privilege security groups, AWS RDS MySQL) — automated end-to-end via GitHub Actions, Docker and AWS ECR.</p>
+            <!-- EDIT: add architecture diagrams or screenshots here -->
+          </div>
+        </template>
       </article>
 
-      <article class="card reveal">
+      <!-- ============ FedHealth ============ -->
+      <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for FedHealth">
         <div class="card__img"><img src="assets/projects/fedhealth.svg" alt="FedHealth ICU Mortality Prediction" /></div>
         <div class="card__body">
-          <span class="card__kicker">Research · Manuscript under review</span>
+          <span class="card__kicker">Capstone Research · VIT</span>
           <h3>FedHealth · ICU Mortality</h3>
-          <p>A privacy-preserving, decentralized mortality model in <strong>PyTorch + Flower.ai</strong> on MIMIC-IV ICU data. FedAvg/FedProx reached <strong>F1 ≈ 0.94 / 95.3%</strong>, far past a sequential ANN baseline (F1 0.82). Under review at <em>BMC Medical Informatics &amp; Decision Making</em>.</p>
+          <p>A privacy-preserving, decentralized mortality model in <strong>PyTorch + Flower.ai</strong> on MIMIC-IV ICU data. FedAvg/FedProx reached <strong>F1 ≈ 0.94 / 95.3%</strong>, far past a sequential ANN baseline (F1 0.82).</p>
           <div class="tags"><span>Federated Learning</span><span>Healthcare</span><span>PyTorch</span></div>
         </div>
-        <a class="card__link" href="https://github.com/rohinidas18" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
-        </a>
+        <span class="card__cta">View details <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <template class="card__detail">
+          <span class="md__kicker">Capstone Research · VIT · 2024</span>
+          <h3 class="md__title">FedHealth · Collaborative ML for ICU Mortality</h3>
+          <div class="md__text">
+            <p>A privacy-preserving, decentralized mortality-prediction model using <strong>PyTorch</strong> and <strong>Flower.ai</strong> on ICU-EHR data from the <strong>MIMIC-IV</strong> database — profiling patients at high risk of mortality from medical history of Prostate Cancer, comorbidities and medication, without ever exchanging raw data.</p>
+            <p>Applied <strong>FedAvg</strong> and <strong>FedProx</strong> federated algorithms to reach an <strong>F1 ≈ 0.94 and 95.3% accuracy</strong>, significantly outperforming a sequential ANN baseline (F1 0.82).</p>
+          </div>
+          <p class="md__caption">Paper preview</p>
+          <iframe class="md__pdf" src="assets/media/fedhealth-paper.pdf" title="FedHealth paper preview"></iframe>
+          <p class="md__caption">Project slides</p>
+          <iframe class="md__pdf" src="assets/media/fedhealth-slides.pdf" title="ICU Mortality Prediction slides"></iframe>
+          <div class="md__links">
+            <a class="btn btn--line" href="assets/media/fedhealth-paper.pdf" target="_blank" rel="noopener">Open paper</a>
+            <a class="btn btn--line" href="assets/media/fedhealth-slides.pdf" target="_blank" rel="noopener">Open slides</a>
+          </div>
+        </template>
       </article>
 
-      <article class="card reveal">
+      <!-- ============ Face Detection ============ -->
+      <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for Face Detection and Recognition">
         <div class="card__img"><img src="assets/projects/face-detection.svg" alt="Automated Face Detection & Recognition" /></div>
         <div class="card__body">
           <span class="card__kicker">Team Project · VIT</span>
@@ -268,12 +324,33 @@
           <p>Led a 4-person team building a <strong>ResNet50</strong> transfer-learning pipeline in TensorFlow/Keras on AT&amp;T Faces &amp; FaceScrub. Hit <strong>98.7%</strong> validation accuracy and shipped into the university's automated attendance system.</p>
           <div class="tags"><span>ResNet50</span><span>TensorFlow</span><span>Computer Vision</span></div>
         </div>
-        <a class="card__link" href="https://github.com/rohinidas18" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.7.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.9 18.3 5.2 18.3 5.2c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
-        </a>
+        <span class="card__cta">View details <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        <template class="card__detail">
+          <span class="md__kicker">Team Project · VIT · 2023</span>
+          <h3 class="md__title">Automated Face Detection &amp; Recognition</h3>
+          <img class="md__banner" src="assets/projects/face-detection.svg" alt="Face Detection and Recognition" />
+          <div class="md__text">
+            <p>A face detection and recognition pipeline built on the <strong>ResNet50</strong> architecture with transfer learning, fine-tuned in Keras/TensorFlow on the <strong>AT&amp;T Faces</strong> and <strong>FaceScrub</strong> datasets.</p>
+            <p>Through systematic hyperparameter tuning during segmentation, the fine-tuned model reached <strong>98.7% validation accuracy</strong> — surpassing the baseline ResNet50 — and was integrated into an automated attendance framework. Built with a 4-person team for the TARP course at VIT.</p>
+          </div>
+          <div class="md__links">
+            <a class="btn btn--solid" href="https://github.com/rohinidas18/face-recognition" target="_blank" rel="noopener">View repository</a>
+          </div>
+        </template>
       </article>
     </div>
   </section>
+
+  <!-- PROJECT MODAL -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="modal__close" id="modalClose" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <div class="modal__body" id="modalBody"></div>
+    </div>
+  </div>
 
   <!-- RECOGNITION -->
   <section class="section recognition" id="recognition">
@@ -298,8 +375,8 @@
         <p>Siemens recognition for AI-based log analysis of HMI panel testing.</p>
       </div>
       <div class="award reveal">
-        <h3>FedHealth — under review</h3>
-        <p>Federated deep learning for ICU mortality, submitted to <em>BMC Medical Informatics &amp; Decision Making</em>.</p>
+        <h3>FedHealth — Healthcare ML Research</h3>
+        <p>Federated deep learning (FedAvg/FedProx) for ICU mortality prediction on MIMIC-IV EHR data.</p>
       </div>
       <a class="award reveal" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jmr.3042" target="_blank" rel="noopener">
         <h3>Bioinformatics publication — Wiley</h3>
