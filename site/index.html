@@ -122,8 +122,8 @@
         </p>
         <p class="reveal">
           Eventually, my passion for analyzing data and applying algorithms to it
-          led me to a computer vision project that won the
-          <strong>Best Paper Award</strong>, and then to applying
+          led me to a computer vision project in Siemens that won the
+          <strong>Best Paper Award</strong>, at IEEE ICACCS and then to applying
           privacy-preserving algorithms to EHR data that predicts ICU mortality
           without ever moving a patient's data.
         </p>
@@ -264,7 +264,7 @@
 
       <!-- ============ Movie Recommender ============ -->
       <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for Real-Time Movie Recommender">
-        <div class="card__img"><img src="assets/projects/movie-rec.svg" alt="Real-Time Movie Recommendation Platform" /></div>
+        <div class="card__img"><img src="assets/projects/movie%20rec%20cover.png" alt="Real-Time Movie Recommendation Platform" /></div>
         <div class="card__body">
           <span class="card__kicker">ML in Production · CMU</span>
           <h3>Real-Time Movie Recommender</h3>
@@ -275,7 +275,7 @@
         <template class="card__detail">
           <span class="md__kicker">ML in Production · CMU · 2026</span>
           <h3 class="md__title">Real-Time Movie Recommender</h3>
-          <video class="md__video" controls preload="metadata" poster="assets/projects/movie-rec.svg">
+          <video class="md__video" controls preload="metadata" poster="assets/projects/movie%20rec%20cover.png">
             <source src="assets/media/movie-rec-demo.mp4" type="video/mp4" />
             Your browser doesn't support embedded video.
           </video>
@@ -294,7 +294,7 @@
 
       <!-- ============ Social Graph ============ -->
       <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for Social Graph Recommender">
-        <div class="card__img"><img src="assets/projects/twitter-graph.svg" alt="Twitter Social Graph Recommendation Service" /></div>
+        <div class="card__img"><img src="assets/projects/twitter-graph.png" alt="Twitter Social Graph Recommendation Service" /></div>
         <div class="card__body">
           <span class="card__kicker">Cloud Computing · CMU</span>
           <h3>Social Graph Recommender</h3>
@@ -305,7 +305,7 @@
         <template class="card__detail">
           <span class="md__kicker">Cloud Computing · CMU · Jan–May 2026</span>
           <h3 class="md__title">Social Graph Recommender</h3>
-          <img class="md__banner" src="assets/projects/twitter-graph.svg" alt="Social Graph Recommender" />
+          <img class="md__banner" src="assets/projects/twitter-graph.png" alt="Social Graph Recommender" />
           <div class="md__text">
             <p>A ranked user-recommendation REST microservice in <strong>Java Spring Boot</strong> sustaining over <strong>6000 RPS</strong> at ~88% accuracy, backed by a multi-stage Scala/Spark ETL pipeline over a <strong>1.2TB</strong> Twitter dataset on GCP (interaction, hashtag Jaccard similarity, log keyword relevance).</p>
             <p>With sub-millisecond web-tier reads via tuned HikariCP / Tomcat / Apache HttpClient pooling, the service was deployed with load balancing across self-managed Kubernetes, AWS EKS and ECS Fargate (Terraform IaC, least-privilege security groups, AWS RDS MySQL) — automated end-to-end via GitHub Actions, Docker and AWS ECR.</p>
@@ -316,7 +316,7 @@
 
       <!-- ============ FedHealth ============ -->
       <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for FedHealth">
-        <div class="card__img"><img src="assets/projects/fedhealth.svg" alt="FedHealth ICU Mortality Prediction" /></div>
+        <div class="card__img"><img src="assets/projects/ICU.png" alt="FedHealth ICU Mortality Prediction" /></div>
         <div class="card__body">
           <span class="card__kicker">Capstone Research · VIT</span>
           <h3>FedHealth · ICU Mortality</h3>
@@ -327,6 +327,7 @@
         <template class="card__detail">
           <span class="md__kicker">Capstone Research · VIT · 2024</span>
           <h3 class="md__title">FedHealth · Collaborative ML for ICU Mortality</h3>
+          <img class="md__banner" src="assets/projects/ICU.png" alt="FedHealth architecture" />
           <div class="md__text">
             <p>A privacy-preserving, decentralized mortality-prediction model using <strong>PyTorch</strong> and <strong>Flower.ai</strong> on ICU-EHR data from the <strong>MIMIC-IV</strong> database — profiling patients at high risk of mortality from medical history of Prostate Cancer, comorbidities and medication, without ever exchanging raw data.</p>
             <p>Applied <strong>FedAvg</strong> and <strong>FedProx</strong> federated algorithms to reach an <strong>F1 ≈ 0.94 and 95.3% accuracy</strong>, significantly outperforming a sequential ANN baseline (F1 0.82).</p>
@@ -344,7 +345,7 @@
 
       <!-- ============ Face Detection ============ -->
       <article class="card reveal" data-modal tabindex="0" role="button" aria-label="Open details for Face Detection and Recognition">
-        <div class="card__img"><img src="assets/projects/face-detection.svg" alt="Automated Face Detection & Recognition" /></div>
+        <div class="card__img"><img src="assets/projects/Face%20Detection.png" alt="Automated Face Detection & Recognition" /></div>
         <div class="card__body">
           <span class="card__kicker">Team Project · VIT</span>
           <h3>Face Detection &amp; Recognition</h3>
@@ -355,13 +356,16 @@
         <template class="card__detail">
           <span class="md__kicker">Team Project · VIT · 2023</span>
           <h3 class="md__title">Automated Face Detection &amp; Recognition</h3>
-          <img class="md__banner" src="assets/projects/face-detection.svg" alt="Face Detection and Recognition" />
+          <img class="md__banner" src="assets/projects/Face%20Detection.png" alt="Face Detection and Recognition" />
           <div class="md__text">
             <p>A face detection and recognition pipeline built on the <strong>ResNet50</strong> architecture with transfer learning, fine-tuned in Keras/TensorFlow on the <strong>AT&amp;T Faces</strong> and <strong>FaceScrub</strong> datasets.</p>
             <p>Through systematic hyperparameter tuning during segmentation, the fine-tuned model reached <strong>98.7% validation accuracy</strong> — surpassing the baseline ResNet50 — and was integrated into an automated attendance framework. Built with a 4-person team for the TARP course at VIT.</p>
           </div>
+          <p class="md__caption">Project paper</p>
+          <iframe class="md__pdf" src="assets/media/face%20recognition.pdf" title="Face Detection and Recognition paper"></iframe>
           <div class="md__links">
             <a class="btn btn--solid" href="https://github.com/rohinidas18/face-recognition" target="_blank" rel="noopener">View repository</a>
+            <a class="btn btn--line" href="assets/media/face%20recognition.pdf" target="_blank" rel="noopener">Open paper</a>
           </div>
         </template>
       </article>
@@ -402,24 +406,20 @@
         <p>Rising Inventor Certificate for invention disclosure 2024E14797 IN — AI-based NFR Optimization at Siemens.</p>
         <span class="award__go">View certificate →</span>
       </a>
-      <div class="award reveal">
-        <h3>FedHealth — Healthcare ML Research</h3>
-        <p>Federated deep learning (FedAvg/FedProx) for ICU mortality prediction on MIMIC-IV EHR data.</p>
-      </div>
       <a class="award reveal" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jmr.3042" target="_blank" rel="noopener">
         <h3>Bioinformatics publication — Wiley</h3>
         <p>Published in the Journal of Molecular Recognition during my undergrad specialization.</p>
         <span class="award__go">Read paper →</span>
       </a>
-      <a class="award reveal" href="assets/media/merit-certificates.pdf" target="_blank" rel="noopener">
+      <a class="award reveal" href="assets/media/merit-scholarships.pdf" target="_blank" rel="noopener">
         <h3>Merit Scholarship — VIT (2020–2024)</h3>
         <p>Awarded every single year of my B.Tech for outstanding academic performance; GPA 3.985 / 4.00.</p>
         <span class="award__go">View certificates →</span>
       </a>
-      <a class="award reveal" href="assets/media/merit-certificates.pdf" target="_blank" rel="noopener">
+      <a class="award reveal" href="assets/media/pr-merged.pdf" target="_blank" rel="noopener">
         <h3>Programme Representative — VIT SCOPE</h3>
-        <p>Elected representative for the School of Computer Science &amp; Engineering (2022–2024).</p>
-        <span class="award__go">View certificate →</span>
+        <p>Elected representative for the School of Computer Science &amp; Engineering (2022–2024) as the <strong>Rank&nbsp;1</strong> student in my programme.</p>
+        <span class="award__go">View certificates →</span>
       </a>
       <div class="award reveal">
         <h3>Teaching Assistant — CMU</h3>
@@ -429,21 +429,41 @@
 
     <!-- EDUCATION -->
     <div class="edu">
-      <div class="edu__item reveal">
+      <div class="edu__item reveal" data-modal tabindex="0" role="button" aria-label="Open details for Carnegie Mellon University">
         <div class="edu__row">
           <h3>Carnegie Mellon University</h3>
           <span class="edu__date">2025 – Dec 2026</span>
         </div>
         <p class="edu__deg">M.S. Computational Data Science · GPA 3.99 / 4.00</p>
         <p class="edu__note">ML in Production · Cloud Computing · Advanced NLP · Multimodal ML · Interactive Data Science (TA)</p>
+        <span class="award__go">View details →</span>
+        <template class="card__detail">
+          <span class="md__kicker">Pittsburgh, PA · 2025 – Dec 2026</span>
+          <h3 class="md__title">Carnegie Mellon University</h3>
+          <div class="md__text">
+            <p><strong>M.S. in Computational Data Science</strong> at the School of Computer Science — GPA <strong>3.99 / 4.00</strong>.</p>
+            <p>Coursework spans Machine Learning in Production, Cloud Computing, Advanced NLP and Multimodal Machine Learning. I also serve as a <strong>Teaching Assistant for Interactive Data Science</strong>.</p>
+            <p><em>Campus photos coming soon.</em></p>
+          </div>
+        </template>
       </div>
-      <div class="edu__item reveal">
+      <div class="edu__item reveal" data-modal tabindex="0" role="button" aria-label="Open details for Vellore Institute of Technology">
         <div class="edu__row">
           <h3>Vellore Institute of Technology</h3>
           <span class="edu__date">2020 – 2024</span>
         </div>
         <p class="edu__deg">B.Tech Computer Science (Bioinformatics) · GPA 3.985 / 4.00</p>
         <p class="edu__note">Deep Learning · Data Structures &amp; Algorithms · Predictive Analytics · Social Information Networks</p>
+        <span class="award__go">View details →</span>
+        <template class="card__detail">
+          <span class="md__kicker">Vellore, India · 2020 – 2024</span>
+          <h3 class="md__title">Vellore Institute of Technology</h3>
+          <div class="md__text">
+            <p><strong>B.Tech in Computer Science &amp; Engineering (Bioinformatics specialization)</strong> — GPA <strong>3.985 / 4.00</strong>.</p>
+            <p>Awarded the <strong>Merit Scholarship every year</strong> of the degree and served as the Rank&nbsp;1 <strong>Programme Representative</strong> for the School of Computer Science &amp; Engineering. Coursework included Deep Learning, Data Structures &amp; Algorithms, Predictive Analytics and Social Information Networks.</p>
+            <p><em>Photos coming soon.</em></p>
+          </div>
+        </template>
       </div>
     </div>
   </section>
@@ -472,13 +492,24 @@
 
   <!-- PERSONAL -->
   <section class="section personal" id="personal">
-    <p class="personal__hi reveal"><span class="personal__heart">&#9829;</span> Like if you stayed till here :)</p>
     <div class="chapter reveal"><span>Ch. 06</span> Off the clock</div>
+    <p class="personal__hi reveal"><span class="personal__heart">&#9829;</span> Like if you stayed till here :)</p>
     <h2 class="section__title reveal">Giving back, beyond the code.</h2>
     <p class="personal__lede reveal">
       Some of the work I'm proudest of never compiled. Through college I spent
-      two-plus years teaching and organizing for community causes.
+      two-plus years leading clubs and organizing for community causes.
     </p>
+
+    <h3 class="personal__subhead reveal">Leadership</h3>
+    <div class="vols">
+      <div class="vol vol--wide reveal">
+        <div class="vol__top"><h3>Toastmasters International — VIT</h3><span class="vol__date">VIT Chapter</span></div>
+        <p class="vol__role">Vice President Education (VPED)</p>
+        <p>Drove the chapter's education program — mentoring members through their speaking pathways, designing meeting agendas and running leadership tracks to grow confident communicators. <em>Photos coming soon.</em></p>
+      </div>
+    </div>
+
+    <h3 class="personal__subhead reveal">Volunteering</h3>
     <div class="vols">
       <a class="vol reveal" href="assets/media/volunteer-bif.pdf" target="_blank" rel="noopener">
         <div class="vol__top"><h3>Becoming I Foundation</h3><span class="vol__date">2020 – 2022</span></div>
@@ -497,7 +528,7 @@
 
   <footer class="footer">
     <span>© <span id="year"></span> Rohini Das</span>
-    <span class="footer__mid">Designed &amp; built from scratch · Pittsburgh, PA</span>
+    <span class="footer__mid">Made with <span class="footer__heart">&#9829;</span> · Santa Clara, CA</span>
     <a href="#top">Back to top ↑</a>
   </footer>
 

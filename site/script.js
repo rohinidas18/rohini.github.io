@@ -138,7 +138,7 @@ const closeModal = () => {
   if (lastFocused) lastFocused.focus();
 };
 
-document.querySelectorAll(".card[data-modal]").forEach((card) => {
+document.querySelectorAll("[data-modal]").forEach((card) => {
   card.addEventListener("click", () => openModal(card));
   card.addEventListener("keydown", (e) => {
     if (e.key === "Enter" || e.key === " ") {

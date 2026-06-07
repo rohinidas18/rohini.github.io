@@ -254,11 +254,13 @@ a.award:hover { border-color: var(--accent); }
 .award__go { display: inline-block; margin-top: 12px; font-family: var(--mono); font-size: 13px; color: var(--accent); }
 
 /* ============ Personal ============ */
-.personal__hi { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 22px; display: inline-flex; align-items: center; gap: 8px; }
+.personal__hi { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--accent); margin: 16px 0 22px; display: flex; align-items: center; gap: 8px; }
 .personal__heart { color: var(--accent); font-size: 15px; animation: heartbeat 1.6s var(--ease) infinite; }
 @keyframes heartbeat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.25); } 24% { transform: scale(1); } 36% { transform: scale(1.2); } }
-.personal__lede { color: var(--muted); font-size: clamp(16px, 2vw, 19px); max-width: 620px; margin: 16px 0 40px; line-height: 1.6; }
+.personal__lede { color: var(--muted); font-size: clamp(16px, 2vw, 19px); max-width: 620px; margin: 16px 0 24px; line-height: 1.6; }
+.personal__subhead { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; }
 .vols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.vol--wide { grid-column: 1 / -1; }
 .vol { background: linear-gradient(180deg, var(--surface), var(--bg-2)); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: transform 0.3s var(--ease), border-color 0.3s; }
 .vol:hover { transform: translateY(-4px); border-color: var(--accent); }
 .vol__top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -270,12 +272,15 @@ a.award:hover { border-color: var(--accent); }
 
 /* ============ Education ============ */
 .edu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
-.edu__item { border: 1px solid var(--line); border-radius: 18px; padding: 26px; background: linear-gradient(180deg, var(--surface), var(--bg-2)); }
+.edu__item { border: 1px solid var(--line); border-radius: 18px; padding: 26px; background: linear-gradient(180deg, var(--surface), var(--bg-2)); transition: transform 0.3s var(--ease), border-color 0.3s; }
+.edu__item[data-modal] { cursor: pointer; }
+.edu__item[data-modal]:hover, .edu__item[data-modal]:focus-visible { transform: translateY(-4px); border-color: var(--accent); outline: none; }
 .edu__row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
 .edu__row h3 { font-family: var(--serif); font-weight: 500; font-size: 22px; }
 .edu__date { font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
 .edu__deg { color: var(--accent); font-weight: 500; font-size: 15px; margin: 8px 0; }
 .edu__note { color: var(--muted); font-size: 14px; }
+.edu__item .award__go { margin-top: 14px; }
 
 /* ============ Contact ============ */
 .contact { text-align: center; overflow: hidden; }
@@ -291,6 +296,7 @@ a.award:hover { border-color: var(--accent); }
 /* ============ Footer ============ */
 .footer { position: relative; z-index: 2; border-top: 1px solid var(--line); max-width: var(--maxw); margin: 0 auto; padding: 30px clamp(20px, 5vw, 56px); display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 13.5px; color: var(--muted); }
 .footer__mid { color: var(--muted-2); font-family: var(--mono); font-size: 12.5px; }
+.footer__heart { color: var(--accent); }
 .footer a:hover { color: var(--accent); }
 
 /* ============ Reveal ============ */
