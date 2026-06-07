@@ -112,6 +112,40 @@ const statObserver = new IntersectionObserver(
 );
 document.querySelectorAll(".stat__num").forEach((el) => statObserver.observe(el));
 
+// Photo carousels (prev / next, one image at a time)
+function initCarousels(root) {
+  root.querySelectorAll("[data-carousel]").forEach((c) => {
+    if (c.dataset.ready) return;
+    c.dataset.ready = "1";
+    const slides = Array.from(c.querySelectorAll(".carousel__slide"));
+    if (!slides.length) return;
+    const counter = c.querySelector(".carousel__current");
+    let i = Math.max(0, slides.findIndex((s) => s.classList.contains("is-active")));
+    const show = (n) => {
+      i = (n + slides.length) % slides.length;
+      slides.forEach((s, k) => s.classList.toggle("is-active", k === i));
+      if (counter) counter.textContent = String(i + 1);
+    };
+    const prev = c.querySelector(".carousel__btn--prev");
+    const next = c.querySelector(".carousel__btn--next");
+    if (prev) prev.addEventListener("click", (e) => { e.stopPropagation(); show(i - 1); });
+    if (next) next.addEventListener("click", (e) => { e.stopPropagation(); show(i + 1); });
+    c.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") { e.preventDefault(); show(i - 1); }
+      else if (e.key === "ArrowRight") { e.preventDefault(); show(i + 1); }
+    });
+    show(i);
+  });
+}
+initCarousels(document);
+
+// Deter casual image downloads (drag + right-click)
+["contextmenu", "dragstart"].forEach((evt) =>
+  document.addEventListener(evt, (e) => {
+    if (e.target && e.target.tagName === "IMG") e.preventDefault();
+  })
+);
+
 // Project modal
 const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modalBody");
@@ -124,6 +158,7 @@ const openModal = (card) => {
   lastFocused = card;
   modalBody.innerHTML = "";
   modalBody.appendChild(tpl.content.cloneNode(true));
+  initCarousels(modalBody);
 
   // Wire up tabs if the content has any
   const tabs = modalBody.querySelectorAll(".md__tab");
