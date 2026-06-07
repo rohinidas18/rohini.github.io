@@ -236,8 +236,22 @@ em { font-style: italic; }
 .md__text strong { color: var(--text); font-weight: 600; }
 .md__gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
 .md__gallery img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 12px; border: 1px solid var(--line); }
+.md__gallery--3 { grid-template-columns: repeat(3, 1fr); }
 .md__links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
 body.modal-open { overflow: hidden; }
+
+/* Modal tabs */
+.md__tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); margin: 0 0 22px; flex-wrap: wrap; }
+.md__tab { appearance: none; background: none; border: none; cursor: pointer; font-family: var(--mono); font-size: 13px; letter-spacing: 0.03em; color: var(--muted); padding: 10px 14px; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: color 0.2s, border-color 0.2s; }
+.md__tab:hover { color: var(--text); }
+.md__tab.is-active { color: var(--accent); border-bottom-color: var(--accent); }
+.md__panel { display: none; }
+.md__panel.is-active { display: block; }
+
+/* Course list (Learning tab) */
+.course { border-left: 2px solid var(--line-2); padding: 2px 0 2px 16px; margin: 14px 0 18px; }
+.course h4 { font-size: 15.5px; font-weight: 600; margin-bottom: 6px; }
+.course p { color: var(--muted); font-size: 14px; line-height: 1.6; }
 
 /* ============ Recognition ============ */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 56px; }
@@ -261,6 +275,9 @@ a.award:hover { border-color: var(--accent); }
 .personal__subhead { font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 40px 0 16px; }
 .vols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .vol--wide { grid-column: 1 / -1; }
+.photo-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 18px; }
+.photo-grid img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 16px; border: 1px solid var(--line); transition: transform 0.35s var(--ease), border-color 0.3s; }
+.photo-grid img:hover { transform: translateY(-4px) scale(1.02); border-color: var(--accent); }
 .vol { background: linear-gradient(180deg, var(--surface), var(--bg-2)); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: transform 0.3s var(--ease), border-color 0.3s; }
 .vol:hover { transform: translateY(-4px); border-color: var(--accent); }
 .vol__top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -326,6 +343,7 @@ a.award:hover { border-color: var(--accent); }
   .nav.is-open .nav__toggle span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .nav.is-open .nav__toggle span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
   .stats, .awards, .vols { grid-template-columns: 1fr; }
+  .photo-grid, .md__gallery--3 { grid-template-columns: repeat(2, 1fr); }
   .tl__meta { text-align: left; flex-direction: row; gap: 10px; }
 }
 

@@ -124,6 +124,21 @@ const openModal = (card) => {
   lastFocused = card;
   modalBody.innerHTML = "";
   modalBody.appendChild(tpl.content.cloneNode(true));
+
+  // Wire up tabs if the content has any
+  const tabs = modalBody.querySelectorAll(".md__tab");
+  if (tabs.length) {
+    const panels = modalBody.querySelectorAll(".md__panel");
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const name = tab.dataset.tab;
+        tabs.forEach((t) => t.classList.toggle("is-active", t === tab));
+        panels.forEach((p) => p.classList.toggle("is-active", p.dataset.panel === name));
+        modalBody.scrollTop = 0;
+      });
+    });
+  }
+
   modal.hidden = false;
   document.body.classList.add("modal-open");
   modalBody.scrollTop = 0;

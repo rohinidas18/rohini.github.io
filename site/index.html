@@ -421,10 +421,11 @@
         <p>Elected representative for the School of Computer Science &amp; Engineering (2022–2024) as the <strong>Rank&nbsp;1</strong> student in my programme.</p>
         <span class="award__go">View certificates →</span>
       </a>
-      <div class="award reveal">
-        <h3>Teaching Assistant — CMU</h3>
-        <p>TA for Interactive Data Science at Carnegie Mellon University.</p>
-      </div>
+      <a class="award reveal" href="https://hcii.cmu.edu/people/adam-perer" target="_blank" rel="noopener">
+        <h3>Teaching Assistant — Interactive Data Science, CMU</h3>
+        <p>TA for Interactive Data Science under <strong>Prof. Adam Perer</strong> at the Human-Computer Interaction Institute.</p>
+        <span class="award__go">Meet the professor →</span>
+      </a>
     </div>
 
     <!-- EDUCATION -->
@@ -440,10 +441,60 @@
         <template class="card__detail">
           <span class="md__kicker">Pittsburgh, PA · 2025 – Dec 2026</span>
           <h3 class="md__title">Carnegie Mellon University</h3>
-          <div class="md__text">
-            <p><strong>M.S. in Computational Data Science</strong> at the School of Computer Science — GPA <strong>3.99 / 4.00</strong>.</p>
-            <p>Coursework spans Machine Learning in Production, Cloud Computing, Advanced NLP and Multimodal Machine Learning. I also serve as a <strong>Teaching Assistant for Interactive Data Science</strong>.</p>
-            <p><em>Campus photos coming soon.</em></p>
+          <img class="md__banner" src="assets/img/cmu-banner.jpg" alt="Carnegie Mellon University campus" />
+          <div class="md__tabs" role="tablist">
+            <button type="button" class="md__tab is-active" data-tab="cmu-overview">Overview</button>
+            <button type="button" class="md__tab" data-tab="cmu-learning">Learning</button>
+            <button type="button" class="md__tab" data-tab="cmu-photos">Photos</button>
+          </div>
+
+          <div class="md__panel is-active" data-panel="cmu-overview">
+            <div class="md__text">
+              <p><strong>M.S. in Computational Data Science</strong> at the School of Computer Science — GPA <strong>3.99 / 4.00</strong> (Aug 2025 – Dec 2026).</p>
+              <p>MCDS sits at the intersection of machine learning, large-scale systems and human-centered data science. Beyond coursework, I serve as a <strong>Teaching Assistant for Interactive Data Science</strong> under <a href="https://hcii.cmu.edu/people/adam-perer" target="_blank" rel="noopener">Prof. Adam Perer</a> at the Human-Computer Interaction Institute.</p>
+            </div>
+          </div>
+
+          <div class="md__panel" data-panel="cmu-learning">
+            <p class="md__caption">Semester 1 · Fall 2025</p>
+            <div class="course">
+              <h4>10-601 · Introduction to Machine Learning</h4>
+              <p>A rigorous, math-first foundation in ML where I implemented core algorithms from the ground up and derived the theory behind them — decision trees and k-NN, the perceptron, linear and logistic regression with feature engineering over GloVe word embeddings, fully-connected neural networks with hand-derived backpropagation, recurrent networks and attention for language modeling, and finally reinforcement learning with policy-gradient / actor–critic agents trained on Atari. Threaded throughout: optimization, regularization, generalization and learning theory.</p>
+            </div>
+            <div class="course">
+              <h4>Foundations of Computational Data Science</h4>
+              <p>The end-to-end data-science lifecycle. I practiced turning ambiguous problems into well-posed ones (domain analysis, problem representation), preparing and versioning data (feature engineering plus data and code versioning with DVC, Git and AWS S3), and reasoning under uncertainty through statistical inference and hypothesis testing — sampling, the law of small numbers, confidence intervals and p-values — closing with modern modeling and the Transformer architecture.</p>
+            </div>
+            <div class="course">
+              <h4>Interactive Data Science</h4>
+              <p>Human-centered, interactive analytics: building exploratory and explanatory visualizations in Python notebooks, designing an interactive project from proposal through delivery, and studying responsible-AI practices including red-teaming and writing datasheets to document data provenance and risk. This is also the course I now TA under Prof. Adam Perer.</p>
+            </div>
+            <div class="course">
+              <h4>Data Science Seminar</h4>
+              <p>A research-immersion and communication seminar. I dissected frontier ML / NLP papers in structured reading-group roles, wrote concise paper summaries and a full literature-review paper in ACL format — my focus was parameter-efficient and federated fine-tuning of language models (adapters, LoRA, hypernetworks) — then red-teamed a model and produced a science-communication video to make technical work legible to a broad audience.</p>
+            </div>
+            <p class="md__caption">Semester 2 · Spring 2026</p>
+            <div class="course">
+              <h4>15-619 · Cloud Computing</h4>
+              <p>Building and scaling real cloud systems across AWS, GCP and Azure — provisioning compute, storage and databases, containerizing services and building big-data ETL. The capstone was a multi-phase Twitter analytics web service: a Scala / Spark pipeline over a 1.2&nbsp;TB dataset feeding a horizontally-scaled REST API tuned to sustain thousands of requests per second under load, with autoscaling, load balancing and cost / performance optimization. This grew into my Social Graph Recommender.</p>
+            </div>
+            <div class="course">
+              <h4>Machine Learning in Production</h4>
+              <p>How ML actually ships. Hands-on labs across Kafka streaming, Docker, Kubernetes, model-serving APIs, CI/CD, monitoring with Prometheus &amp; Grafana, explainability, and ML security, safety &amp; risk. The semester project — a real-time movie recommender on live Kafka streams with automated retraining, A/B testing and drift monitoring — became my Real-Time Movie Recommender. The throughline: data quality, reproducibility, observability and responsible deployment.</p>
+            </div>
+          </div>
+
+          <div class="md__panel" data-panel="cmu-photos">
+            <div class="md__gallery md__gallery--3">
+              <img loading="lazy" src="assets/img/cmu-01.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-02.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-03.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-04.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-05.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-06.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-07.jpg" alt="CMU" />
+              <img loading="lazy" src="assets/img/cmu-08.jpg" alt="CMU convocation" />
+            </div>
           </div>
         </template>
       </div>
@@ -523,6 +574,21 @@
         <p>Drove community-development drives and youth-engagement initiatives focused on social welfare.</p>
         <span class="award__go">Certificate →</span>
       </a>
+    </div>
+
+    <h3 class="personal__subhead reveal">I love sunsets</h3>
+    <p class="personal__lede reveal">
+      And chasing the light at the end of a long day — a few from wherever I've happened to be.
+    </p>
+    <div class="photo-grid reveal">
+      <img loading="lazy" src="assets/img/sunset-01.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-02.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-03.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-04.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-05.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-06.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-07.jpg" alt="Sunset" />
+      <img loading="lazy" src="assets/img/sunset-08.jpg" alt="Sunset" />
     </div>
   </section>
 
