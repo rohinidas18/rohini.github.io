@@ -120,7 +120,8 @@ em { font-style: italic; }
   -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 30%, transparent 80%);
 }
 .hero__inner { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: clamp(30px, 5vw, 70px); align-items: center; }
-.hero__name { font-family: var(--serif); font-weight: 400; font-size: clamp(64px, 12vw, 150px); line-height: 0.86; letter-spacing: -0.03em; margin: 18px 0 20px; }
+.hero__hi { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(20px, 3vw, 30px); color: var(--muted); margin-top: 16px; }
+.hero__name { font-family: var(--serif); font-weight: 400; font-size: clamp(64px, 12vw, 150px); line-height: 0.86; letter-spacing: -0.03em; margin: 4px 0 20px; }
 .hero__tagline { font-family: var(--mono); font-weight: 500; font-size: clamp(17px, 2.2vw, 24px); color: var(--text); margin-bottom: 22px; }
 .hero__lede { font-size: clamp(15px, 1.5vw, 17.5px); color: var(--muted); max-width: 30em; margin-bottom: 32px; }
 .hero__lede strong { color: var(--text); font-weight: 600; }
@@ -252,6 +253,21 @@ a.award:hover { border-color: var(--accent); }
 .award p { color: var(--muted); font-size: 14px; }
 .award__go { display: inline-block; margin-top: 12px; font-family: var(--mono); font-size: 13px; color: var(--accent); }
 
+/* ============ Personal ============ */
+.personal__hi { font-family: var(--mono); font-size: 13px; letter-spacing: 0.04em; color: var(--accent); margin-bottom: 22px; display: inline-flex; align-items: center; gap: 8px; }
+.personal__heart { color: var(--accent); font-size: 15px; animation: heartbeat 1.6s var(--ease) infinite; }
+@keyframes heartbeat { 0%, 100% { transform: scale(1); } 12% { transform: scale(1.25); } 24% { transform: scale(1); } 36% { transform: scale(1.2); } }
+.personal__lede { color: var(--muted); font-size: clamp(16px, 2vw, 19px); max-width: 620px; margin: 16px 0 40px; line-height: 1.6; }
+.vols { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.vol { background: linear-gradient(180deg, var(--surface), var(--bg-2)); border: 1px solid var(--line); border-radius: 18px; padding: 28px; transition: transform 0.3s var(--ease), border-color 0.3s; }
+.vol:hover { transform: translateY(-4px); border-color: var(--accent); }
+.vol__top { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.vol__top h3 { font-size: 19px; font-weight: 600; }
+.vol__date { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.vol__role { color: var(--accent); font-size: 14px; margin: 4px 0 12px; }
+.vol p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+@media (prefers-reduced-motion: reduce) { .personal__heart { animation: none; } }
+
 /* ============ Education ============ */
 .edu { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .edu__item { border: 1px solid var(--line); border-radius: 18px; padding: 26px; background: linear-gradient(180deg, var(--surface), var(--bg-2)); }
@@ -303,7 +319,7 @@ a.award:hover { border-color: var(--accent); }
   .nav__toggle { display: flex; }
   .nav.is-open .nav__toggle span:first-child { transform: translateY(3.5px) rotate(45deg); }
   .nav.is-open .nav__toggle span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
-  .stats, .awards { grid-template-columns: 1fr; }
+  .stats, .awards, .vols { grid-template-columns: 1fr; }
   .tl__meta { text-align: left; flex-direction: row; gap: 10px; }
 }
 
