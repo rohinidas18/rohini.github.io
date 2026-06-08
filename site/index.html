@@ -538,12 +538,13 @@
               <button type="button" class="carousel__btn carousel__btn--next" aria-label="Next photo">
                 <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
               </button>
-              <div class="carousel__counter"><span class="carousel__current">1</span> / 11</div>
+              <div class="carousel__counter"><span class="carousel__current">1</span> / 12</div>
             </div>
           </div>
         </template>
       </div>
-      <div class="edu__item reveal" data-modal tabindex="0" role="button" aria-label="Open details for Vellore Institute of Technology">
+      <div class="edu__item edu__item--banner reveal" data-modal tabindex="0" role="button" aria-label="Open details for Vellore Institute of Technology">
+        <img class="edu__banner" loading="lazy" src="assets/img/vit-banner.jpg" alt="Vellore Institute of Technology campus" />
         <div class="edu__row">
           <h3>Vellore Institute of Technology</h3>
           <span class="edu__date">2020 – 2024</span>
@@ -554,9 +555,37 @@
         <template class="card__detail">
           <span class="md__kicker">Vellore, India · 2020 – 2024</span>
           <h3 class="md__title">Vellore Institute of Technology</h3>
-          <div class="md__text">
-            <p><strong>B.Tech in Computer Science &amp; Engineering (Bioinformatics specialization)</strong>  GPA <strong>3.985 / 4.00</strong>.</p>
-            <p>Awarded the <strong>Merit Scholarship every year</strong> of the degree and served as the Rank&nbsp;1 <strong>Programme Representative</strong> for the School of Computer Science &amp; Engineering. Coursework included Deep Learning, Data Structures &amp; Algorithms, Predictive Analytics and Social Information Networks.</p>
+          <img class="md__banner" src="assets/img/vit-banner.jpg" alt="Vellore Institute of Technology campus" />
+          <div class="md__tabs" role="tablist">
+            <button type="button" class="md__tab is-active" data-tab="vit-overview">Overview</button>
+            <button type="button" class="md__tab" data-tab="vit-photos">Photos</button>
+          </div>
+          <div class="md__panel is-active" data-panel="vit-overview">
+            <div class="md__text">
+              <p><strong>B.Tech in Computer Science &amp; Engineering (Bioinformatics specialization)</strong> — GPA <strong>3.985 / 4.00</strong>.</p>
+              <p>Awarded the <strong>Merit Scholarship every year</strong> of the degree and served as the Rank&nbsp;1 <strong>Programme Representative</strong> for the School of Computer Science &amp; Engineering. Coursework included Deep Learning, Data Structures &amp; Algorithms, Predictive Analytics and Social Information Networks.</p>
+            </div>
+          </div>
+          <div class="md__panel" data-panel="vit-photos">
+            <div class="carousel" data-carousel tabindex="0" aria-label="VIT photo gallery">
+              <div class="carousel__viewport">
+                <figure class="carousel__slide is-active"><img loading="lazy" src="assets/img/vit-02.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-03.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-04.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-05.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-06.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-07.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-08.jpg" alt="VIT" /></figure>
+                <figure class="carousel__slide"><img loading="lazy" src="assets/img/vit-09.jpg" alt="VIT" /></figure>
+              </div>
+              <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Previous photo">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <button type="button" class="carousel__btn carousel__btn--next" aria-label="Next photo">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+              </button>
+              <div class="carousel__counter"><span class="carousel__current">1</span> / 8</div>
+            </div>
           </div>
         </template>
       </div>
@@ -567,6 +596,9 @@
   <section class="section contact" id="contact">
     <div class="contact__bg" aria-hidden="true"><div class="orb orb--c"></div></div>
     <div class="chapter reveal"><span>Ch. 05</span> The next chapter</div>
+    <div class="contact__portrait reveal">
+      <img src="assets/img/rohptf.jpg" alt="Rohini Das" loading="lazy" />
+    </div>
     <h2 class="contact__title reveal">Let's build something<br /><em>that matters.</em></h2>
     <p class="contact__lede reveal">
       I'm looking for ML / AI Engineer roles where research meets production.
@@ -598,10 +630,30 @@
     <h3 class="personal__subhead reveal">Leadership</h3>
     <div class="vols">
       <div class="vol vol--wide reveal">
-        <div class="vol__top"><h3>Toastmasters International  VIT</h3><span class="vol__date">VIT Chapter</span></div>
+        <div class="vol__top"><h3>Toastmasters International — VIT</h3><span class="vol__date">VIT Chapter</span></div>
         <p class="vol__role">Vice President Education (VPED)</p>
-        <p>Drove the chapter's education program  mentoring members through their speaking pathways, designing meeting agendas and running leadership tracks to grow confident communicators. <em>Photos coming soon.</em></p>
+        <p>Drove the chapter's education program — mentoring members through their speaking pathways, designing meeting agendas and running leadership tracks to grow confident communicators.</p>
       </div>
+    </div>
+    <div class="carousel carousel--wide reveal" data-carousel tabindex="0" aria-label="Toastmasters photo gallery">
+      <div class="carousel__viewport">
+        <figure class="carousel__slide is-active"><img loading="lazy" src="assets/img/ttm-01.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-02.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-03.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-04.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-05.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-06.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-07.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-08.jpg" alt="Toastmasters at VIT" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/ttm-09.jpg" alt="Toastmasters at VIT" /></figure>
+      </div>
+      <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Previous photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button type="button" class="carousel__btn carousel__btn--next" aria-label="Next photo">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+      <div class="carousel__counter"><span class="carousel__current">1</span> / 9</div>
     </div>
 
     <h3 class="personal__subhead reveal">Volunteering</h3>
@@ -635,6 +687,7 @@
         <figure class="carousel__slide"><img loading="lazy" src="assets/img/sunset-07.jpg" alt="Sunset" /></figure>
         <figure class="carousel__slide"><img loading="lazy" src="assets/img/sunset-08.jpg" alt="Sunset" /></figure>
         <figure class="carousel__slide"><img loading="lazy" src="assets/img/sunset-09.jpg" alt="Sunset" /></figure>
+        <figure class="carousel__slide"><img loading="lazy" src="assets/img/sunset.jpg" alt="Sunset" /></figure>
       </div>
       <button type="button" class="carousel__btn carousel__btn--prev" aria-label="Previous photo">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
@@ -642,7 +695,7 @@
       <button type="button" class="carousel__btn carousel__btn--next" aria-label="Next photo">
         <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
       </button>
-      <div class="carousel__counter"><span class="carousel__current">1</span> / 9</div>
+      <div class="carousel__counter"><span class="carousel__current">1</span> / 10</div>
     </div>
   </section>
 

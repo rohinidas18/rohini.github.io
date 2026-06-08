@@ -321,7 +321,10 @@ a.award:hover { border-color: var(--accent); }
 .edu__item .award__go { margin-top: 14px; }
 
 /* ============ Contact ============ */
-.contact { text-align: center; overflow: hidden; }
+.personal .carousel { margin: 16px 0 36px; }
+
+.contact__portrait { width: 92px; margin: 0 auto 28px; border-radius: 50%; overflow: hidden; border: 1px solid var(--line-2); box-shadow: 0 0 0 4px rgba(255,107,53,0.08); }
+.contact__portrait img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .contact__bg { position: absolute; inset: 0; z-index: -1; }
 .contact__title { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 8vw, 92px); line-height: 0.98; letter-spacing: -0.03em; margin-bottom: 26px; }
 .contact__title em { color: var(--accent); }
