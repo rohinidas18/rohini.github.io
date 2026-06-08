@@ -103,6 +103,7 @@ em { font-style: italic; }
 .chapter span { color: var(--accent); }
 .chapter::after { content: ""; width: 48px; height: 1px; background: var(--line-2); }
 .section__title { font-family: var(--serif); font-weight: 500; font-size: clamp(34px, 5vw, 60px); line-height: 1.04; letter-spacing: -0.02em; margin-bottom: 54px; }
+.section__lede { max-width: 720px; color: var(--muted); font-size: 16px; line-height: 1.65; margin: -36px 0 48px; }
 .eyebrow { font-family: var(--mono); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
 
 /* ============ Hero ============ */
@@ -267,6 +268,10 @@ body.modal-open { overflow: hidden; }
 .course { border-left: 2px solid var(--line-2); padding: 2px 0 2px 16px; margin: 14px 0 18px; }
 .course h4 { font-size: 15.5px; font-weight: 600; margin-bottom: 6px; }
 .course p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+.course ol { margin: 8px 0 0; padding-left: 18px; color: var(--muted); font-size: 14px; line-height: 1.65; }
+.course li { margin-bottom: 8px; }
+.course li:last-child { margin-bottom: 0; }
+.course code { font-family: var(--mono); font-size: 12px; color: var(--accent-2); }
 
 /* ============ Recognition ============ */
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-bottom: 56px; }
