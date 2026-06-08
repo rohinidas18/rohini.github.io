@@ -253,17 +253,18 @@ body.modal-open { overflow: hidden; }
 .carousel { position: relative; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: #0a0d13; margin-top: 4px; }
 .carousel__viewport { position: relative; width: 100%; aspect-ratio: 4 / 5; }
 .carousel--wide .carousel__viewport { aspect-ratio: 16 / 10; }
-/* Personal-section galleries: smaller footprint, less “full bleed” */
-.personal .carousel.carousel--wide {
-  max-width: 520px;
-  margin-left: 0;
+/* Inline section galleries (Toastmasters, sunsets): compact, centered */
+.carousel.carousel--compact {
+  width: min(100%, 440px);
+  max-width: 440px;
+  margin-left: auto;
   margin-right: auto;
 }
-.personal .carousel.carousel--wide .carousel__viewport {
+.carousel.carousel--compact .carousel__viewport {
   aspect-ratio: unset;
-  height: clamp(220px, 42vw, 280px);
+  height: clamp(180px, 32vw, 240px);
 }
-.personal .carousel.carousel--wide .carousel__slide img {
+.carousel.carousel--compact .carousel__slide img {
   padding: 10px;
   box-sizing: border-box;
 }
@@ -336,11 +337,10 @@ a.award:hover { border-color: var(--accent); }
 
 /* ============ Contact ============ */
 .contact { text-align: center; overflow: hidden; }
+.contact .chapter { display: flex; justify-content: center; width: 100%; }
 .personal .carousel { margin: 16px 0 36px; }
-.contact__portrait { width: 92px; margin: 0 auto 28px; border-radius: 50%; overflow: hidden; border: 1px solid var(--line-2); box-shadow: 0 0 0 4px rgba(255,107,53,0.08); }
-.contact__portrait img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .contact__bg { position: absolute; inset: 0; z-index: -1; }
-.contact__title { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 8vw, 92px); line-height: 0.98; letter-spacing: -0.03em; margin-bottom: 26px; }
+.contact__title { font-family: var(--serif); font-weight: 400; font-size: clamp(40px, 8vw, 92px); line-height: 0.98; letter-spacing: -0.03em; margin-bottom: 26px; text-align: center; }
 .contact__title em { color: var(--accent); }
 .contact__lede { color: var(--muted); max-width: 36em; margin: 0 auto 38px; font-size: clamp(15px, 1.6vw, 18px); }
 .contact__cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
